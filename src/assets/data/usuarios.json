@@ -1,0 +1,21 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "direccion": "Quito"
+    }
+  ],
+  "users": [
+    {
+      "email": "heydi@gamil.com",
+      "password": "$2a$10$3O5zFHUDVbElxSMlP6EOe.icYA7Nw7KB8hRvzQN9bDqf/psPe7IsS",
+      "id": 1
+    },
+    {
+      "email": "ana@gmail.com",
+      "password": "$2a$10$iBpgU/4zKlaYwacl57QDvuWYnHa8J3ZrqzxTl8eDpnkQdcEGND2tq",
+      "id": 2
+    }
+  ]
+}
