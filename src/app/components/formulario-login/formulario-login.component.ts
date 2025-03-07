@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoginService } from '../../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-login',
@@ -11,7 +12,7 @@ import { LoginService } from '../../services/login.service';
 })
 export class FormularioLoginComponent {
 
-  constructor(private servicio:LoginService){}
+  constructor(private servicio:LoginService, private route:Router){}
   email:any;
   password:any;
 
@@ -22,6 +23,7 @@ export class FormularioLoginComponent {
       let token=acceso.accessToken
       if(token!=''){//ingreso los valores correctos con email y contraseña
       localStorage.setItem("login","true")//decirle al guardian cuando sea true que se despegue la ruta de ingreso
+      this.route.navigate(["privado"]);
       }
     })
   }

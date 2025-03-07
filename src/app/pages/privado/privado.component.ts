@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-privado',
@@ -9,5 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './privado.component.css'
 })
 export class PrivadoComponent {
+
+  constructor(private servicio:LoginService, private route:Router){}
+  logout(){
+    localStorage.setItem("login","false")
+    this.route.navigate(["login"]);
+  }
 
 }

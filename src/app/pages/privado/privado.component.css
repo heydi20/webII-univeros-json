@@ -26,3 +26,7 @@ footer {
     background-color: #2f3741;
     color: #fff;
 }
+.botonSesion{
+    display: flex;
+    align-content: center;
+}

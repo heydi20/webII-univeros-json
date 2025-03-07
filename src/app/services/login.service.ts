@@ -17,4 +17,8 @@ export class LoginService {
   postLogin(usuario:any):Observable<any>{
     return this.http.post(this.API_LOGIN, usuario)
   }
+
+  logout(){
+    localStorage.setItem("login","false")
+  }
 }
